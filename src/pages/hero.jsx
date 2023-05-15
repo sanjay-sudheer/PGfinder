@@ -15,7 +15,7 @@ export default function hero() {
             </div>
             <div className='hero-cont'>
                 <div className='hero-left'>
-                    <p>Find your gream pg today!</p>
+                    <p>Find your dream pg today!</p>
                     <button className='join-btn'>join now</button>
                 </div>
                 <div className='hero-right'>
