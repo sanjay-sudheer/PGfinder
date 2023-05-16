@@ -1,6 +1,7 @@
 import React from 'react'
 import logoimg from '../images/logo.png';
 import pgimg from '../images/pg.jpg'
+import './hero.css'
 export default function hero() {
     return (
         <div className='hero'>
