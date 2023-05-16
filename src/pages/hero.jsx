@@ -1,4 +1,5 @@
 import React from 'react'
+import { MouseParallaxContainer, MouseParallaxChild } from "react-parallax-mouse";
 import logoimg from '../images/logo.png';
 import pgimg from '../images/pg.jpg'
 import './hero.css'
@@ -10,19 +11,25 @@ export default function hero() {
                     <img src={logoimg} alt="" />
                 </div>
                 <div className='nav-right'>
-                    <button className='login-btn'>login
-                    </button>
+                    <a style={{textDecoration:'none'}} href="/login" className='login-btn'>login</a>
                 </div>
             </div>
-            <div className='hero-cont'>
-                <div className='hero-left'>
-                    <p>Find your dream pg today!</p>
-                    <button className='join-btn'>join now</button>
+
+            <MouseParallaxContainer>
+                <div className='hero-cont'>
+                    <div className='hero-left'>
+                        <p>Find your dream pg today!</p>
+                        <a style={{textDecoration:'none'}} href="/join" className='join-btn'>join now</a>
+                    </div>
+                    <div className='hero-right'>
+                        <MouseParallaxChild factorX={0.03} factorY={0.05}>
+                            <img src={pgimg} alt="" />
+                        </MouseParallaxChild>
+
+                    </div>
                 </div>
-                <div className='hero-right'>
-                    <img src={pgimg} alt="" />
-                </div>
-            </div>
+            </MouseParallaxContainer>
+
         </div>
     );
 }
